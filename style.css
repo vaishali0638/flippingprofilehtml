@@ -5,32 +5,30 @@
 {
     font-family: "Poppins", sans-serif;
 }
-body{
+.card{
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient( to bottom right,#00ccff,#3ad554 );
-}
-.container
-{
-    position: relative;
     z-index: 100;
-   
+    transition: 0.9s;
+    position: relative;
+    transform-style: preserve-3d;
 }
-.container:hover
+.card:hover
 {
     transform: rotateY(180deg);
-    transition: 0.6s;
+    
 }
-body .container
+.card.container
 {
     height: 67vh;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    backface-visibility: hidden;
+   perspective: 1000px;
    
 }
 .image
@@ -53,11 +51,13 @@ body .container
 }
 .container
 {
+    position:absolute;
     height:450px;
     width: 350px;
     background: white;
     border-radius: 10px;
     transform: rotateY(180deg);
+    backface-visibility: hidden;
 }
 .container .profile-img
 {
@@ -74,6 +74,7 @@ body .container
 .image1
 {
     padding-left: 70px;
+    padding-top: 60px;
 }
 
 .media-buttons
